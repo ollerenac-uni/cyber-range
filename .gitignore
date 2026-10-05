@@ -1,0 +1,36 @@
+# --- secrets / credentials — NEVER commit (caused leak in prior repo) ---
+secrets/
+**/secrets/
+.planning/secrets/
+*.secret
+*.key
+*.pem
+*.pfx
+.env
+.env.*
+PASSWORDS.md
+
+# --- planning scratch: keep local by default (uncomment to track non-secret planning) ---
+# .planning/
+
+# --- generated docs site ---
+site/
+
+# --- large / generated binaries ---
+*.pdf
+
+# --- python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# --- agent / tool scratch ---
+.playwright-mcp/
+.claude/worktrees/
