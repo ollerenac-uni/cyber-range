@@ -1,0 +1,17 @@
+/* Granate red palette — Cyber Range */
+:root {
+  --md-primary-fg-color:        #7B1F26;
+  --md-primary-fg-color--light: #A0282F;
+  --md-primary-fg-color--dark:  #5A1219;
+  --md-accent-fg-color:         #C1363E;
+  --md-accent-fg-color--transparent: #C1363E1A;
+}
+
+/* Dark scheme: keep the garnet identity, lift link/accent for contrast */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #7B1F26;
+  --md-primary-fg-color--light: #A0282F;
+  --md-primary-fg-color--dark:  #4A0F15;
+  --md-accent-fg-color:         #E05058;
+  --md-typeset-a-color:         #E05058;
+}

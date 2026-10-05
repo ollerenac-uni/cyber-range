@@ -1,0 +1,72 @@
+site_name: Cyber Range — APT Emulation & Intrusion Detection
+site_url: https://ollerenac-uni.github.io/cyber-range/
+site_description: >-
+  Cyber Range virtualizado que emula APT29, OilRig y Wizard Spider con
+  MITRE CALDERA + Elastic Stack (SIEM, EDR, ML). Guía de implementación —
+  Trabajo de Suficiencia Profesional, FIEE-UNI.
+site_author: Oscar Llerena
+
+repo_name: ollerenac-uni/cyber-range
+repo_url: https://github.com/ollerenac-uni/cyber-range
+edit_uri: edit/master/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Modo oscuro
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - navigation.indexes
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+nav:
+  - Inicio: index.md
+  - Arquitectura:
+    - Diseño de red: network-design.md
+    - VLAN10 — Target/Enterprise: vlan10-build.md
+    - Superficie vulnerable: vulnerable-surface.md
+  - Implementación:
+    - 1. Hosts Proxmox: guias/01-proxmox.md
+    - 2. DC / Active Directory: guias/02-dc-ad.md
+    - 3. Exchange (diferido): guias/03-exchange.md
+    - 4. SQL Server: guias/04-sql-server.md
+    - 5. App Server: guias/05-appserver.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
